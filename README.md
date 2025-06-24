@@ -2,6 +2,8 @@
 
 Projeto Java com arquitetura limpa usando Spring Boot.
 
+Simula um sistema bancário com depósitos, saques, saldo e cartão de crédito com limite baseado no saldo mensal.
+
 ---
 
 ## 🧩 Tecnologias utilizadas
@@ -10,6 +12,7 @@ Projeto Java com arquitetura limpa usando Spring Boot.
 - Spring Boot 3.5.3
 - Maven
 - Swagger (Springdoc OpenAPI)
+- PostgreSQL (via Docker)
 - Lombok
 - H2 (opcional para testes locais)
 - JUnit / Mockito (para testes)
@@ -31,11 +34,30 @@ src/
                     └── application/  # Controllers, Configurações (REST, Swagger)
 
 ```
+
+## 💳 Funcionalidades previstas
+- Criar usuário
+
+- Realizar depósitos e saques
+
+- Consultar saldo
+
+- Emitir cartão de crédito baseado no saldo mensal:
+
+    - Se saldo final ≥ R$ 1000, limite = 10% do saldo
+    - Atualização automática a cada mês
+
 ## 🚀 Como executar
 Pré-requisitos
 - Java 17 instalado
 - Maven instalado
+- Docker instalado
 
+### 🐳 Subir banco de dados (PostgreSQL via Docker)
+
+```bash
+  docker-compose up -d
+```
 ✅ Rodando o projeto
 ```bash
   mvn spring-boot:run
