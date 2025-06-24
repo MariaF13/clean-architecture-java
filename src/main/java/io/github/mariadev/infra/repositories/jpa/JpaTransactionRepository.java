@@ -8,5 +8,5 @@ import java.util.List;
 
 public interface JpaTransactionRepository extends JpaRepository<Transaction, Long> {
     List<Transaction> findByAccountId(Long accountId);
-    List<Transaction> findByAccountIdAndDataHoraBetween(Long accountId, LocalDateTime start, LocalDateTime end);
+    List<Transaction> findByAccountIdAndDateTimeBetween(Long accountId, LocalDateTime start, LocalDateTime end);
 }

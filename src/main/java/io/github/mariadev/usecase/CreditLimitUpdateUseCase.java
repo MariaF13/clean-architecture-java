@@ -34,7 +34,7 @@ public class CreditLimitUpdateUseCase {
             newLimit = balance.multiply(BigDecimal.valueOf(0.1));
         }
 
-        card.setLimit(newLimit);
+        card.setCreditLimit(newLimit);
         creditCardRepository.save(card);
 
         log.info("Credit limit updated to {} for account {}", newLimit, accountId);

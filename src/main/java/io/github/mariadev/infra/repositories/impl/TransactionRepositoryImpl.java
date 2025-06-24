@@ -24,6 +24,6 @@ public class TransactionRepositoryImpl implements TransactionRepository {
     }
 
     public List<Transaction> findByAccountIdAndDataHoraBetween(Long accountId, LocalDateTime start, LocalDateTime end) {
-        return jpa.findByAccountIdAndDataHoraBetween(accountId, start, end);
+        return jpa.findByAccountIdAndDateTimeBetween(accountId, start, end);
     }
 }

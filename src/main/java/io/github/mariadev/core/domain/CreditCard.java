@@ -16,7 +16,7 @@ public class CreditCard {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private BigDecimal limit;
+    private BigDecimal creditLimit;
 
     private LocalDate lastUpdateDate;
 
