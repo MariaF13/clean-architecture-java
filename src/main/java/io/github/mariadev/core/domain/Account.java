@@ -15,14 +15,14 @@ public class Account {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private BigDecimal saldo;
+    private BigDecimal balance;
 
     @OneToOne
     @JoinColumn(name = "user_id")
     private User user;
 
     @OneToMany(mappedBy = "account", cascade = CascadeType.ALL)
-    private List<Transaction> transacoes;
+    private List<Transaction> transactions;
 
     @OneToOne(mappedBy = "account", cascade = CascadeType.ALL)
     private CreditCard creditCard;

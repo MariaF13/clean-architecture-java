@@ -6,17 +6,24 @@ import lombok.*;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
+@Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class Transaction {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private BigDecimal valor;
+    private BigDecimal amount;
 
     @Enumerated(EnumType.STRING)
-    private TypeTransaction tipo;
+    private TypeTransaction type;
 
-    private LocalDateTime dataHora;
+    private LocalDateTime dateTime;
 
     @ManyToOne
     @JoinColumn(name = "account_id")

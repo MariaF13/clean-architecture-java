@@ -16,9 +16,9 @@ public class CreditCard {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private BigDecimal limite;
+    private BigDecimal limit;
 
-    private LocalDate dataUltimaAtualizacao;
+    private LocalDate lastUpdateDate;
 
     @OneToOne
     @JoinColumn(name = "account_id")
