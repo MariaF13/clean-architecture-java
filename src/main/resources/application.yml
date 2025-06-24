@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/project_bank
+    username: postgres
+    password: 123456
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+  # Para debug com o Swagger
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+# Porta padrão
+server:
+  port: 8080
