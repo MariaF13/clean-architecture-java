@@ -1,4 +1,4 @@
-package io.github.mariadev.application.dto;
+package io.github.mariadev.application.dto.account;
 
 import java.math.BigDecimal;
 

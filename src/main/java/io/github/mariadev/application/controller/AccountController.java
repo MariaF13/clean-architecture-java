@@ -1,14 +1,12 @@
 package io.github.mariadev.application.controller;
 
-import io.github.mariadev.application.dto.DebitRequest;
-import io.github.mariadev.application.dto.DepositRequest;
-import io.github.mariadev.usecase.DebitUseCase;
-import io.github.mariadev.usecase.DepositUseCase;
+import io.github.mariadev.application.dto.account.DebitRequest;
+import io.github.mariadev.application.dto.account.DepositRequest;
+import io.github.mariadev.usecase.account.DebitUseCase;
+import io.github.mariadev.usecase.account.DepositUseCase;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.math.BigDecimal;
 
 @RestController
 @RequestMapping("/accounts")

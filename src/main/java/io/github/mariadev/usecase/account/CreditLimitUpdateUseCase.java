@@ -1,4 +1,4 @@
-package io.github.mariadev.usecase;
+package io.github.mariadev.usecase.account;
 
 import io.github.mariadev.core.contracts.AccountRepository;
 import io.github.mariadev.core.contracts.CreditCardRepository;
