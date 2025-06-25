@@ -13,7 +13,7 @@ public class CreateUserUseCase {
 
     public User execute(String name, String email) {
         User user = User.builder()
-                .nome(name)
+                .name(name)
                 .email(email)
                 .build();
         return userRepository.save(user);

@@ -8,6 +8,7 @@ import io.github.mariadev.usecase.account.CreateAccountUseCase;
 import io.github.mariadev.usecase.account.DebitUseCase;
 import io.github.mariadev.usecase.account.DepositUseCase;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,21 +21,21 @@ public class AccountController {
     private final DebitUseCase debitUseCase;
     private final CreateAccountUseCase createAccountUseCase;
 
-    @PostMapping("/{accountId}/deposit")
+    @PutMapping("/{accountId}/deposit")
     public ResponseEntity<Void> deposit(@PathVariable Long accountId, @RequestBody DepositRequest request) {
         depositUseCase.execute(accountId, request.amount());
-        return ResponseEntity.ok().build();
+        return ResponseEntity.noContent().build();
     }
 
-    @PostMapping("/{accountId}/debit")
+    @PutMapping("/{accountId}/debit")
     public ResponseEntity<Void> debit(@PathVariable Long accountId, @RequestBody DebitRequest request) {
         debitUseCase.execute(accountId, request.amount());
-        return ResponseEntity.ok().build();
+        return ResponseEntity.noContent().build();
     }
 
     @PostMapping
     public ResponseEntity<Account> createAccount(@RequestBody AccountCreateRequest request) {
         Account account = createAccountUseCase.execute(request);
-        return ResponseEntity.ok(account);
+        return ResponseEntity.status(201).body(account); // 201 Created + corpo
     }
 }
