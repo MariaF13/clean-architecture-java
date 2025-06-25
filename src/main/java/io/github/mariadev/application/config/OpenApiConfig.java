@@ -16,4 +16,4 @@ public class OpenApiConfig {
                         .version("1.0.0")
                         .description("API para operações bancárias com arquitetura limpa."));
     }
-}  
+}
