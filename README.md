@@ -8,13 +8,12 @@ Simula um sistema bancário com depósitos, saques, saldo e cartão de crédito 
 
 ## 🧩 Tecnologias utilizadas
 
-- Java 17
+- Java 21
 - Spring Boot 3.5.3
 - Maven
 - Swagger (Springdoc OpenAPI)
 - PostgreSQL (via Docker)
 - Lombok
-- H2 (opcional para testes locais)
 - JUnit / Mockito (para testes)
 
 ---
